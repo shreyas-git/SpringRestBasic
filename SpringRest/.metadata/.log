@@ -1,0 +1,366 @@
+!SESSION 2017-10-31 10:16:55.473 -----------------------------------------------
+eclipse.buildId=3.8.1.201607290850-RELEASE-e46
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.sts.ide -product org.springsource.sts.ide -data C:\Microservice_training\micro\SpringRest -product org.springsource.sts.ide
+
+!ENTRY org.eclipse.jface.text 2 0 2017-10-31 10:17:01.105
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-10-31 10:17:01.136
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2017-10-31 10:17:07.734
+!MESSAGE Connection to http://dist.springsource.com/release/STS/discovery/no_product.properties failed on No route to host: connect. Retry attempt 0 started
+!STACK 0
+java.net.NoRouteToHostException: No route to host: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient4.ECFHttpClientProtocolSocketFactory.connectSocket(ECFHttpClientProtocolSocketFactory.java:86)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:674)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.springsource.ide.eclipse.commons.core 4 0 2017-10-31 10:17:07.988
+!MESSAGE Internal Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Download of http://dist.springsource.com/release/STS/discovery/no_product.properties failed: No route to host: connect
+	at org.springsource.ide.eclipse.commons.internal.core.net.HttpClientTransportService.toException(HttpClientTransportService.java:229)
+	at org.springsource.ide.eclipse.commons.internal.core.net.HttpClientTransportService.stream(HttpClientTransportService.java:209)
+	at org.springsource.ide.eclipse.commons.core.preferences.StsProperties.uriStream(StsProperties.java:206)
+	at org.springsource.ide.eclipse.commons.core.preferences.StsProperties.readProperties(StsProperties.java:180)
+	at org.springsource.ide.eclipse.commons.core.preferences.StsProperties.<init>(StsProperties.java:145)
+	at org.springsource.ide.eclipse.commons.core.preferences.StsProperties.getInstance(StsProperties.java:127)
+	at org.springsource.ide.eclipse.commons.gettingstarted.dashboard.DashboardCopier._getCopy(DashboardCopier.java:77)
+	at org.springsource.ide.eclipse.commons.gettingstarted.dashboard.DashboardCopier.getCopy(DashboardCopier.java:62)
+	at org.springsource.ide.eclipse.commons.gettingstarted.dashboard.WelcomeDashboard$2.run(WelcomeDashboard.java:126)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.net.NoRouteToHostException: No route to host: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.mylyn.internal.commons.net.MonitoredRequest.connect(MonitoredRequest.java:97)
+	at org.eclipse.mylyn.internal.commons.net.PollingProtocolSocketFactory.createSocket(PollingProtocolSocketFactory.java:54)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.eclipse.mylyn.commons.net.WebUtil$2.execute(WebUtil.java:334)
+	at org.eclipse.mylyn.commons.net.WebUtil$2.execute(WebUtil.java:1)
+	at org.eclipse.mylyn.internal.commons.net.MonitoredRequest.call(MonitoredRequest.java:51)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.springsource.ide.eclipse.commons.core 4 0 2017-10-31 10:17:07.988
+!MESSAGE Download of http://dist.springsource.com/release/STS/discovery/no_product.properties failed: No route to host: connect
+!STACK 0
+java.net.NoRouteToHostException: No route to host: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.mylyn.internal.commons.net.MonitoredRequest.connect(MonitoredRequest.java:97)
+	at org.eclipse.mylyn.internal.commons.net.PollingProtocolSocketFactory.createSocket(PollingProtocolSocketFactory.java:54)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.eclipse.mylyn.commons.net.WebUtil$2.execute(WebUtil.java:334)
+	at org.eclipse.mylyn.commons.net.WebUtil$2.execute(WebUtil.java:1)
+	at org.eclipse.mylyn.internal.commons.net.MonitoredRequest.call(MonitoredRequest.java:51)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.springsource.ide.eclipse.commons.core 2 0 2017-10-31 10:17:07.989
+!MESSAGE Couldn't read sts properties from 'http://dist.springsource.com/release/STS/discovery/no_product.properties' internal default values will be used
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2017-10-31 10:17:08.009
+!MESSAGE Connection to http://dist.springsource.com/release/STS/discovery/sts.properties failed on No route to host: connect. Retry attempt 0 started
+!STACK 0
+java.net.NoRouteToHostException: No route to host: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient4.ECFHttpClientProtocolSocketFactory.connectSocket(ECFHttpClientProtocolSocketFactory.java:86)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.springsource.ide.eclipse.commons.core 4 0 2017-10-31 10:17:08.237
+!MESSAGE Internal Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Download of http://dist.springsource.com/release/STS/discovery/sts.properties failed: No route to host: connect
+	at org.springsource.ide.eclipse.commons.internal.core.net.HttpClientTransportService.toException(HttpClientTransportService.java:229)
+	at org.springsource.ide.eclipse.commons.internal.core.net.HttpClientTransportService.stream(HttpClientTransportService.java:209)
+	at org.springsource.ide.eclipse.commons.core.preferences.StsProperties.uriStream(StsProperties.java:206)
+	at org.springsource.ide.eclipse.commons.core.preferences.StsProperties.readProperties(StsProperties.java:180)
+	at org.springsource.ide.eclipse.commons.core.preferences.StsProperties.<init>(StsProperties.java:145)
+	at org.springsource.ide.eclipse.commons.core.preferences.StsProperties.getInstance(StsProperties.java:127)
+	at org.springsource.ide.eclipse.commons.gettingstarted.dashboard.DashboardCopier._getCopy(DashboardCopier.java:77)
+	at org.springsource.ide.eclipse.commons.gettingstarted.dashboard.DashboardCopier.getCopy(DashboardCopier.java:62)
+	at org.springsource.ide.eclipse.commons.gettingstarted.dashboard.WelcomeDashboard$2.run(WelcomeDashboard.java:126)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.net.NoRouteToHostException: No route to host: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.mylyn.internal.commons.net.MonitoredRequest.connect(MonitoredRequest.java:97)
+	at org.eclipse.mylyn.internal.commons.net.PollingProtocolSocketFactory.createSocket(PollingProtocolSocketFactory.java:54)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.eclipse.mylyn.commons.net.WebUtil$2.execute(WebUtil.java:334)
+	at org.eclipse.mylyn.commons.net.WebUtil$2.execute(WebUtil.java:1)
+	at org.eclipse.mylyn.internal.commons.net.MonitoredRequest.call(MonitoredRequest.java:51)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.springsource.ide.eclipse.commons.core 4 0 2017-10-31 10:17:08.237
+!MESSAGE Download of http://dist.springsource.com/release/STS/discovery/sts.properties failed: No route to host: connect
+!STACK 0
+java.net.NoRouteToHostException: No route to host: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.mylyn.internal.commons.net.MonitoredRequest.connect(MonitoredRequest.java:97)
+	at org.eclipse.mylyn.internal.commons.net.PollingProtocolSocketFactory.createSocket(PollingProtocolSocketFactory.java:54)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.eclipse.mylyn.commons.net.WebUtil$2.execute(WebUtil.java:334)
+	at org.eclipse.mylyn.commons.net.WebUtil$2.execute(WebUtil.java:1)
+	at org.eclipse.mylyn.internal.commons.net.MonitoredRequest.call(MonitoredRequest.java:51)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.springsource.ide.eclipse.commons.core 2 0 2017-10-31 10:17:08.238
+!MESSAGE Couldn't read sts properties from 'http://dist.springsource.com/release/STS/discovery/sts.properties' internal default values will be used
+
+!ENTRY org.eclipse.core.jobs 2 2 2017-10-31 10:17:16.508
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.ui.internal.Workbench$55
+!SESSION 2017-10-31 10:21:10.798 -----------------------------------------------
+eclipse.buildId=3.8.1.201607290850-RELEASE-e46
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -data C:\Microservice_training\micro\SpringRest -product org.springsource.sts.ide
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2017-10-31 10:21:17.555
+!MESSAGE Connection to http://dist.springsource.com/release/STS/discovery/no_product.properties failed on dist.springsource.com. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: dist.springsource.com
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(Unknown Source)
+	at java.net.InetAddress.getAddressesFromNameService(Unknown Source)
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.springsource.ide.eclipse.commons.core 4 0 2017-10-31 10:21:17.826
+!MESSAGE Internal Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Download of http://dist.springsource.com/release/STS/discovery/no_product.properties failed: dist.springsource.com
+	at org.springsource.ide.eclipse.commons.internal.core.net.HttpClientTransportService.toException(HttpClientTransportService.java:229)
+	at org.springsource.ide.eclipse.commons.internal.core.net.HttpClientTransportService.stream(HttpClientTransportService.java:209)
+	at org.springsource.ide.eclipse.commons.core.preferences.StsProperties.uriStream(StsProperties.java:206)
+	at org.springsource.ide.eclipse.commons.core.preferences.StsProperties.readProperties(StsProperties.java:180)
+	at org.springsource.ide.eclipse.commons.core.preferences.StsProperties.<init>(StsProperties.java:145)
+	at org.springsource.ide.eclipse.commons.core.preferences.StsProperties.getInstance(StsProperties.java:127)
+	at org.springsource.ide.eclipse.commons.gettingstarted.dashboard.DashboardCopier._getCopy(DashboardCopier.java:77)
+	at org.springsource.ide.eclipse.commons.gettingstarted.dashboard.DashboardCopier.getCopy(DashboardCopier.java:62)
+	at org.springsource.ide.eclipse.commons.gettingstarted.dashboard.WelcomeDashboard$2.run(WelcomeDashboard.java:126)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.net.UnknownHostException: dist.springsource.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.mylyn.internal.commons.net.MonitoredRequest.connect(MonitoredRequest.java:97)
+	at org.eclipse.mylyn.internal.commons.net.PollingProtocolSocketFactory.createSocket(PollingProtocolSocketFactory.java:54)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.eclipse.mylyn.commons.net.WebUtil$2.execute(WebUtil.java:334)
+	at org.eclipse.mylyn.commons.net.WebUtil$2.execute(WebUtil.java:1)
+	at org.eclipse.mylyn.internal.commons.net.MonitoredRequest.call(MonitoredRequest.java:51)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.springsource.ide.eclipse.commons.core 4 0 2017-10-31 10:21:17.826
+!MESSAGE Download of http://dist.springsource.com/release/STS/discovery/no_product.properties failed: dist.springsource.com
+!STACK 0
+java.net.UnknownHostException: dist.springsource.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.mylyn.internal.commons.net.MonitoredRequest.connect(MonitoredRequest.java:97)
+	at org.eclipse.mylyn.internal.commons.net.PollingProtocolSocketFactory.createSocket(PollingProtocolSocketFactory.java:54)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.eclipse.mylyn.commons.net.WebUtil$2.execute(WebUtil.java:334)
+	at org.eclipse.mylyn.commons.net.WebUtil$2.execute(WebUtil.java:1)
+	at org.eclipse.mylyn.internal.commons.net.MonitoredRequest.call(MonitoredRequest.java:51)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.springsource.ide.eclipse.commons.core 2 0 2017-10-31 10:21:17.828
+!MESSAGE Couldn't read sts properties from 'http://dist.springsource.com/release/STS/discovery/no_product.properties' internal default values will be used
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2017-10-31 10:21:17.843
+!MESSAGE Connection to http://dist.springsource.com/release/STS/discovery/sts.properties failed on dist.springsource.com. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: dist.springsource.com
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.springsource.ide.eclipse.commons.core 4 0 2017-10-31 10:21:18.066
+!MESSAGE Internal Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Download of http://dist.springsource.com/release/STS/discovery/sts.properties failed: dist.springsource.com
+	at org.springsource.ide.eclipse.commons.internal.core.net.HttpClientTransportService.toException(HttpClientTransportService.java:229)
+	at org.springsource.ide.eclipse.commons.internal.core.net.HttpClientTransportService.stream(HttpClientTransportService.java:209)
+	at org.springsource.ide.eclipse.commons.core.preferences.StsProperties.uriStream(StsProperties.java:206)
+	at org.springsource.ide.eclipse.commons.core.preferences.StsProperties.readProperties(StsProperties.java:180)
+	at org.springsource.ide.eclipse.commons.core.preferences.StsProperties.<init>(StsProperties.java:145)
+	at org.springsource.ide.eclipse.commons.core.preferences.StsProperties.getInstance(StsProperties.java:127)
+	at org.springsource.ide.eclipse.commons.gettingstarted.dashboard.DashboardCopier._getCopy(DashboardCopier.java:77)
+	at org.springsource.ide.eclipse.commons.gettingstarted.dashboard.DashboardCopier.getCopy(DashboardCopier.java:62)
+	at org.springsource.ide.eclipse.commons.gettingstarted.dashboard.WelcomeDashboard$2.run(WelcomeDashboard.java:126)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.net.UnknownHostException: dist.springsource.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.mylyn.internal.commons.net.MonitoredRequest.connect(MonitoredRequest.java:97)
+	at org.eclipse.mylyn.internal.commons.net.PollingProtocolSocketFactory.createSocket(PollingProtocolSocketFactory.java:54)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.eclipse.mylyn.commons.net.WebUtil$2.execute(WebUtil.java:334)
+	at org.eclipse.mylyn.commons.net.WebUtil$2.execute(WebUtil.java:1)
+	at org.eclipse.mylyn.internal.commons.net.MonitoredRequest.call(MonitoredRequest.java:51)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 org.springsource.ide.eclipse.commons.core 4 0 2017-10-31 10:21:18.067
+!MESSAGE Download of http://dist.springsource.com/release/STS/discovery/sts.properties failed: dist.springsource.com
+!STACK 0
+java.net.UnknownHostException: dist.springsource.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.mylyn.internal.commons.net.MonitoredRequest.connect(MonitoredRequest.java:97)
+	at org.eclipse.mylyn.internal.commons.net.PollingProtocolSocketFactory.createSocket(PollingProtocolSocketFactory.java:54)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.eclipse.mylyn.commons.net.WebUtil$2.execute(WebUtil.java:334)
+	at org.eclipse.mylyn.commons.net.WebUtil$2.execute(WebUtil.java:1)
+	at org.eclipse.mylyn.internal.commons.net.MonitoredRequest.call(MonitoredRequest.java:51)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.springsource.ide.eclipse.commons.core 2 0 2017-10-31 10:21:18.067
+!MESSAGE Couldn't read sts properties from 'http://dist.springsource.com/release/STS/discovery/sts.properties' internal default values will be used
